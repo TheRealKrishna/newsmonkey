@@ -72,9 +72,6 @@ export default function Navbar(props){
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="/pages/about">About</Link>
-                </li>
-                <li className="nav-item">
                 <Link className="nav-link" to="/category/business">Business</Link>
                 </li>
                 <li className="nav-item">
@@ -91,6 +88,9 @@ export default function Navbar(props){
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" to="/category/technology">Technology</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" to="/pages/about">About</Link>
                 </li>
             </ul>
             <button className="btn" style={{marginRight:"20px"}} onClick={toogleTheme}> <img src={currentThemeIcon} alt="darkModeButton"/></button>
