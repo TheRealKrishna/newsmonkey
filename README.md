@@ -54,4 +54,3 @@
 <h2>License</h2>
 <p>This project's licensing information is not provided.</p>
 <p>Feel free to reach out if you have any questions or suggestions! 😊</p>
-<p>GitHub Link: <a target="_new" href="https://github.com/TheRealKrishna/newsmonkey">NewsMonkey Repository</a></p>
