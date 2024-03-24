@@ -16,8 +16,8 @@ export default function News(props) {
 
     const fetchArticles = async () => {
         await props.setProgress(10)
-        // let url = await `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}`
-        let url = await `https://saurav.tech/NewsAPI/top-headlines/category/${props.category.toLowerCase()}/${props.country.toLowerCase()}.json`
+        let url = await `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}`
+        // let url = await `https://saurav.tech/NewsAPI/top-headlines/category/${props.category.toLowerCase()}/${props.country.toLowerCase()}.json`
         await props.setProgress(50)
         let response = await fetch(url);
         let parsedData = await response.json();
@@ -30,8 +30,8 @@ export default function News(props) {
     const fetchMoreArticles = async () => {
         props.setRefreshThemeElements(page)
         const nextPage = page + 1;
-        // let url = await `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${nextPage}`
-        let url = await `https://saurav.tech/NewsAPI/top-headlines/category/${props.category.toLowerCase()}/${props.country.toLowerCase()}.json`
+        let url = await `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${nextPage}`
+        // let url = await `https://saurav.tech/NewsAPI/top-headlines/category/${props.category.toLowerCase()}/${props.country.toLowerCase()}.json`
         let response = await fetch(url);
         let parsedData = await response.json();
         await setArticles(articles.concat(parsedData.articles))
